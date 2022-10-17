@@ -2,7 +2,7 @@
 A simple game made in C!
 Feed the snek and move it into food to make it bigger!
 
-[Live Demo Here at my Website!](https://ashtheamin.github.io/snek/snek.html)
+[Live Demo Here at my Website! Click here to play right in the browser!](https://ashtheamin.github.io/snek/snek.html)
 ![Snek](screenshot.png)
 
 # Instructions

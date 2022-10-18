@@ -19,17 +19,18 @@ End: Hit any key to go back to start.
 - This program depends on `emscripten` to compile it to a webassembly target
 
 # Compiling:
+Initial steps
 - Have a directory with the snek.c file in it
 - Create a folder called third_party/roboto_mono/
 - Add the roboto mono font and name it RobotoMono-Bold.ttf
 
-- Natively on Linux:
+Natively on Linux:
 - Assuming you have Debian Linux: Ensure `gcc`, `libsdl2-dev` and `libsdl2-ttf-dev` are installed.
 - Ensure you are in the directory containing the C file
 - Run`gcc -o snek snek.c -lSDL2 -lSDL_ttf -Wall -Werror`
 - Run the output with `./snek` in the directory to execute.
 
-- Compiling for WebAssembly:
+Compiling for WebAssembly:
 - Assuming you are on Debian Linux, ensure that emscripten latest toolchain is installed.
 - Ensure you are in the directory containing the C file
 - Run `em++ snek.c -o snek.html -s USE_SDL=2 -s USE_SDL_TTF=2`

@@ -47,36 +47,36 @@ Compiling for WebAssembly:
 - A snek entity is what the player must guide to the food entity. The program every x milliseconds, based on difficulty, will update entities and render the map.
 - Input is polled, `snek_input()` is called to process it to set the snek direction then `snek_update()` and `snek_render()` are called every x millisecondds to update the entities and world.
 - Score is increased every time food is consumed, and the snek entity is not allowed to bump into itself or the walls.
-- If the snek entity does something that is forbidden, then the program will be set to the GAME_OVER status and will show the game over screen
+- If the snek entity does something that is forbidden, then the program will be set to the GAME_OVER status and will show the game over screen.
 - If a key is presased, then reset the state to `START_MENU` and restart the cycle.
 - If the program state is set to `QUIT_LOOP`, then the loop is broken and all resources freed and de allocated.
 
 # Data structures and variables:
-- Constants:
-  - These are set to represent important information that functions depend on.
-  - These include screen resolution, colours for tile maps, program states, difficulties and directions.
+Constants:
+- These are set to represent important information that functions depend on.
+- These include screen resolution, colours for tile maps, program states, difficulties and directions.
 
-- Snek struct
+Snek struct:
   - A global variable stored on the stack which points to a pointer to allocated memory on the heap.
   - The pointer points to locations which functions rely on to retrieve information.
   - This includes SDL window, renderer, font, program status, snek entity, food entity, and the map and direction and timer.
 
-- Snek entity struct:
-    - A linked list abstract data type that stores all nodes associated with a snek entity.
+Snek entity struct:
+  - A linked list abstract data type that stores all nodes associated with a snek entity.
 
-- Food entity:
+Food entity:
   - Two ints that represent a coordinate for the food entity.
-
-- Status:
+ 
+Status:
   - The current state of the program.
-
-- Direction:
-  - The direction the snek's head is assumed to go on the next update, based on the current input.
-
-- Timer:
+ 
+Direction:
+ - The direction the snek's head is assumed to go on the next update, based on the current input.
+ 
+Timer:
   - This stores the information needed to keep track of when it is appropriate to call the update function.
 
-- Tile Map:
+Tile Map:
   - An integer 2D array matrix that stores informations for tiles to render.
   - This is the method in which entities can be represented and displayed on the screen
   - `snek_render()` will update this map based on the colours represented in each position on the grid.

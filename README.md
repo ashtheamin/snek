@@ -78,5 +78,5 @@ Timer:
 
 Tile Map:
   - An integer 2D array matrix that stores informations for tiles to render.
-  - This is the method in which entities can be represented and displayed on the screen
+  - This is the method in which entities can be represented and displayed on the screen.
   - `snek_render()` will update this map based on the colours represented in each position on the grid.
